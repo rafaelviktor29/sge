@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}SGE - Detalhes da Marca{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-4">
+    <h3 class="display-6">Detalhes da Marca</h3>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{ object.name }}</h3>
+        <p class="card-text">{{ object.description }}</p>
+      </div>
+    </div>
+
+    <a href="{% url 'brand_list' %}" class="btn btn-secondary mt-3">Voltar</a>
+
+  </div>
+
+{% endblock %}

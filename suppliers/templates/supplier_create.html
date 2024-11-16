@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}SGE - Novo Fornecedor{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-4">
+    <h3 class="display-6">Cadastrar Fornecedor</h3>
+
+    <div class="card">
+      <div class="card-body">
+        <form action="{% url 'supplier_create' %}" method="post" class="form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <a href="{% url 'supplier_list' %}" class="btn btn-secondary mt-3">Cancelar e Voltar</a>
+
+  </div>
+
+{% endblock %}
